@@ -8,7 +8,7 @@ router.get("/hobby", (req, res) => {
   const { hobby } = req.query;
 
   if (!hobby) {
-    return res.status(400).json({ error: "Debe enviar el parámetro 'hobby'" });
+    return res.status(400).json({ error: "Debe enviar el parámetro hobby" });
   }
 
   const usuariosFiltrados = data.filter((user) => user.hobbies.includes(hobby));
@@ -20,7 +20,7 @@ router.get("/exists", (req, res) => {
   const { codigo } = req.query;
 
   if (!codigo) {
-    return res.status(400).json({ error: "Debe enviar el parámetro 'codigo'" });
+    return res.status(400).json({ error: "Debe enviar el parámetro codigo" });
   }
 
   const existe = data.some((user) => user.codigo === codigo);
@@ -33,7 +33,7 @@ router.get("/hobby/count", (req, res) => {
   const { hobby } = req.query;
 
   if (!hobby) {
-    return res.status(400).json({ error: "Debe enviar el parámetro 'hobby'" });
+    return res.status(400).json({ error: "Debe enviar el parámetro hobby" });
   }
 
   const cantidad = data.filter((user) => user.hobbies.includes(hobby)).length;
