@@ -1,5 +1,5 @@
-const { app, port } = require("./server");
-const routes = require("./routes");
+const { app, port } = require("./server.js");
+const routes = require("./routes.js");
 
 app.use("/users", routes);
 
